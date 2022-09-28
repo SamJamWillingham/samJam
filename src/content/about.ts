@@ -1,4 +1,4 @@
-export const uxDesignerTools = ['Figma', 'wireFrame.cc']
+export const uxDesignerTools = ['Figma', 'wireFrame.cc', 'Font Awesome']
 
 export const uxDesignerGoals = ['Create user-centered, and equity-focused designs', 'Continue to gain experience creating wireframes, mockups, and prototypes', 'Continue to learn more about user research']
 

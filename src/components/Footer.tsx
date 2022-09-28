@@ -5,9 +5,9 @@ import linkedin from "../assets/linkedin.svg";
 
 export const Footer = () => {
   return (
-    <div className="h-60 bg-biege bottom-0 mt-5 w-full pt-10">
-      <h1 className="w-72 my-0 mx-auto text-center font-kinkOmite text-6xl text-lightorange tracking-wider">
-        samjam
+    <div className="h-60 bg-biege bottom-0 mt-3 w-full pt-10">
+      <h1 className="w-72 my-0 mx-auto p-4 text-center text-5xl text-black tracking-wider">
+        samJam
       </h1>
       <h2 className="text-2xl leading-9 text-center">Sam Fields Willingham</h2>
       <div className="flex justify-around max-w-xs my-0 mx-auto">
