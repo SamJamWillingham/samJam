@@ -17,7 +17,6 @@ import {
   uxDesignerTools,
 } from "./content/about";
 import sketchPortrait from "./assets/sketchPortrait2.jpeg";
-import nextIcon from "./assets/nextIcon.png";
 import { Footer } from "./components/Footer";
 import { PortfolioCard } from "./components/PortfolioCard";
 import { Tag } from "./components/Tag";
@@ -45,7 +44,7 @@ function App() {
     <div id="App" onMouseMove={handleScroll}>
       <div className="absolute bg-biege w-full h-[450px] z-[-1]"></div>
       <Header />
-      <div id="about">
+      <div>
         <div className="block max-w-xs my-0 mx-auto">
           <img
             className="rounded-[50%] mt-24"
@@ -53,7 +52,7 @@ function App() {
             alt="sam avatar"
           />
         </div>
-        <h2 className="text-2xl leading-9 mt-16 text-center">
+        <h2 className="text-2xl leading-9 pt-16 text-center" id="about">
           I am Sam Fields Willingham.
           <br />I am a people-first software engineer and UX designer.
         </h2>
@@ -133,7 +132,7 @@ function App() {
         </div>
         {/* Portfolio */}
 
-        <h3 className="mt-28 text-3xl m-2 text-center">Portfolio</h3>
+        <h3 className="pt-28 text-3xl m-2 text-center" id="portfolio">Portfolio</h3>
         <div className="grid grid-cols-2 max-w-[80%] my-0 mx-auto">
           <PortfolioCard>
             <h3 className="text-2xl">New Portfolio Website</h3>
