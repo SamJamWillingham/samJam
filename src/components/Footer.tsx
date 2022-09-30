@@ -5,7 +5,7 @@ import linkedin from "../assets/linkedin.svg";
 
 export const Footer = () => {
   return (
-    <div className="h-60 bg-biege bottom-0 mt-3 w-full pt-10">
+    <div className="h-max lg:h-60 bg-biege bottom-0 mt-3 w-full pt-6 lg:pt-10">
       <h1 className="w-72 my-0 mx-auto p-4 text-center text-5xl text-black tracking-wider">
         samJam
       </h1>
@@ -39,7 +39,7 @@ export const Footer = () => {
           />
         </a>
       </div>
-      <div className="text-center">
+      <div className="text-center m-4 mt-0">
         <p>
           This website was designed and coded by me! The portrait/avatar was
           made by HungrydamyArt,{" "}

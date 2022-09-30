@@ -52,12 +52,23 @@ function App() {
             alt="sam avatar"
           />
         </div>
-        <h2 className="text-2xl leading-9 pt-16 text-center" id="about">
+        <h2 className="text-2xl leading-9 pt-16 text-center mx-4 md:mx-0" id="about">
           I am Sam Fields Willingham.
           <br />I am a people-first software engineer and UX designer.
         </h2>
-        <div className="flex justify-evenly mt-28 text-center">
-          <div className="w-96">
+        <div className="flex justify-center pt-16 md:hidden">
+        <button className="border border-medorange rounded-md text-2xl font-normal text-medorange shadow-orangey p-6 hover:bg-medorange hover:text-white hover:transition-all hover:ease-out hover:duration-300 active:shadow-inner">
+            <a
+              href="https://docs.google.com/document/d/1pCKlm7vciNW4CGUotjASlV9emqTN7yoFvUrBOadxYwQ/edit?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open CV
+            </a>
+          </button>
+        </div>
+        <div className="block lg:flex lg:justify-evenly mt-28 text-center">
+          <div className="w-96 my-0 mx-auto">
             <img
               src={kanban}
               alt="paint brush"
@@ -79,7 +90,7 @@ function App() {
               </div>
             </AboutCard>
           </div>
-          <div className="w-96">
+          <div className="w-96 my-0 mx-auto ">
             <img
               src={git}
               alt="paint brush"
@@ -107,7 +118,7 @@ function App() {
               ))}
             </AboutCard>
           </div>
-          <div className="w-96">
+          <div className="w-96 my-0 mx-auto ">
             <img
               src={paintBucket}
               alt="paint brush"
@@ -130,10 +141,11 @@ function App() {
             </AboutCard>
           </div>
         </div>
+
         {/* Portfolio */}
 
         <h3 className="pt-28 text-3xl m-2 text-center" id="portfolio">Portfolio</h3>
-        <div className="grid grid-cols-2 max-w-[80%] my-0 mx-auto">
+        <div className="lg:grid lg:grid-cols-2 max-w-[90%] ipad:max-w-[100%] lg:max-w-[80%] my-0 mx-auto">
           <PortfolioCard>
             <h3 className="text-2xl">New Portfolio Website</h3>
             <div className="flex w-[70%] text-left">
@@ -272,8 +284,8 @@ function App() {
         </div>
         {/* Download CV button */}
         <div className="flex justify-evenly mt-28">
-          <img src={sketchPortrait} alt="sketch" width={400} />
-          <button className="w-96 h-fit self-center border border-medorange rounded-md text-4xl font-normal text-medorange py-6 hover:bg-medorange hover:text-white hover:transition-all hover:ease-out hover:duration-300 active:shadow-inner">
+          <img src={sketchPortrait} alt="sketch" className=" w-[180px] sm:w-[260px] md:w-[400px]" />
+          <button className="w-60 sm:w-64 md:w-96 h-fit self-center border border-medorange rounded-md text-3xl md:text-4xl font-normal text-medorange shadow-orangey py-4 md:py-6 hover:bg-medorange hover:text-white hover:transition-all hover:ease-out hover:duration-300 active:shadow-inner">
             <a
               href="https://docs.google.com/document/d/1pCKlm7vciNW4CGUotjASlV9emqTN7yoFvUrBOadxYwQ/edit?usp=sharing"
               target="_blank"
