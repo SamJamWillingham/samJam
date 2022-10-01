@@ -28,20 +28,9 @@ import {
 } from "./content/portfolio";
 
 function App() {
-  const [isAboutCardVisible, setIsAboutCardVisible] = React.useState(false);
-
-  const handleScroll = (e: any) => {
-    const y = window.scrollY;
-    console.log("listening", y);
-    if (y > 50) {
-      setIsAboutCardVisible(true);
-    } else {
-      setIsAboutCardVisible(false);
-    }
-  };
 
   return (
-    <div id="App" onMouseMove={handleScroll}>
+    <div id="App" className="overflow-y-auto">
       <div className="absolute bg-biege w-full h-[450px] z-[-1]"></div>
       <Header />
       <div>
@@ -52,12 +41,15 @@ function App() {
             alt="sam avatar"
           />
         </div>
-        <h2 className="text-2xl leading-9 pt-16 text-center mx-4 md:mx-0" id="about">
+        <h2
+          className="text-2xl leading-9 pt-16 text-center mx-4 md:mx-0"
+          id="about"
+        >
           I am Sam Fields Willingham.
           <br />I am a people-first software engineer and UX designer.
         </h2>
         <div className="flex justify-center pt-16 md:hidden">
-        <button className="border border-medorange rounded-md text-2xl font-normal text-medorange shadow-orangey p-6 hover:bg-medorange hover:text-white hover:transition-all hover:ease-out hover:duration-300 active:shadow-inner">
+          <button className="border border-medorange rounded-md text-2xl font-normal text-medorange shadow-orangey p-6 hover:bg-medorange hover:text-white hover:transition-all hover:ease-out hover:duration-300 active:shadow-inner">
             <a
               href="https://docs.google.com/document/d/1pCKlm7vciNW4CGUotjASlV9emqTN7yoFvUrBOadxYwQ/edit?usp=sharing"
               target="_blank"
@@ -77,7 +69,7 @@ function App() {
               className="my-0 mx-auto mb-11"
             />
             <h3 className="text-2xl m-2">Scrum Product Owner</h3>
-            <AboutCard isAboutCardVisible={isAboutCardVisible}>
+            <AboutCard>
               <p className="text-darkorange pb-5">Certification</p>
               {poCertifications.map((val) => (
                 <p className="pb-5">{val}</p>
@@ -99,7 +91,7 @@ function App() {
               className="my-0 mx-auto mb-11"
             />
             <h3 className="text-2xl m-2">Software Engineer</h3>
-            <AboutCard isAboutCardVisible={isAboutCardVisible}>
+            <AboutCard>
               <p className="text-darkorange pb-5">Languages</p>
               <div className="grid grid-cols-3">
                 {feDevLanguages.map((val) => (
@@ -127,7 +119,7 @@ function App() {
               className="my-0 mx-auto mb-11"
             />
             <h3 className="text-2xl m-2">UX Designer</h3>
-            <AboutCard isAboutCardVisible={isAboutCardVisible}>
+            <AboutCard>
               <p className="text-darkorange pb-5">Tools</p>
               <div className="grid grid-cols-3">
                 {uxDesignerTools.map((val) => (
@@ -144,7 +136,9 @@ function App() {
 
         {/* Portfolio */}
 
-        <h3 className="pt-28 text-3xl m-2 text-center" id="portfolio">Portfolio</h3>
+        <h3 className="pt-28 text-3xl m-2 text-center" id="portfolio">
+          Portfolio
+        </h3>
         <div className="lg:grid lg:grid-cols-2 max-w-[90%] ipad:max-w-[100%] lg:max-w-[80%] my-0 mx-auto">
           <PortfolioCard>
             <h3 className="text-2xl">New Portfolio Website</h3>
@@ -251,7 +245,12 @@ function App() {
               <Tag type="product-owner">ClickUp</Tag>
             </div>
             <div className="pt-2 pr-2 pb-2 flex">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" alt="nextJs icon" width={80} height={100} />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg"
+                alt="nextJs icon"
+                width={80}
+                height={100}
+              />
               <p className="pl-4">{tarotCardAppDescr}</p>
             </div>
             <div className="mt-2">
@@ -284,7 +283,11 @@ function App() {
         </div>
         {/* Download CV button */}
         <div className="flex justify-evenly mt-28">
-          <img src={sketchPortrait} alt="sketch" className=" w-[180px] sm:w-[260px] md:w-[400px]" />
+          <img
+            src={sketchPortrait}
+            alt="sketch"
+            className=" w-[180px] sm:w-[260px] md:w-[400px]"
+          />
           <button className="w-60 sm:w-64 md:w-96 h-fit self-center border border-medorange rounded-md text-3xl md:text-4xl font-normal text-medorange shadow-orangey py-4 md:py-6 hover:bg-medorange hover:text-white hover:transition-all hover:ease-out hover:duration-300 active:shadow-inner">
             <a
               href="https://docs.google.com/document/d/1pCKlm7vciNW4CGUotjASlV9emqTN7yoFvUrBOadxYwQ/edit?usp=sharing"
